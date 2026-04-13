@@ -1,9 +1,19 @@
 {
   "posts": [
     {
+      "slug": "the-source-code-of-everything-the-beatles-the-forge-and-the-technology-that-changed-the-world",
+      "title": "The Source Code of Everything: The Beatles, the Forge, and the Technology That Changed the World",
+      "excerpt": "He hired a forty-piece orchestra and gave them an instruction that made every classically trained musician in the room slightly uncomfortable: start at your lowest note, end at your highest note, do not synchronize with each other, and make the journey in whatever way feels natural. The result was not music in any traditional sense. It was controlled chaos. It was analog randomization. It was what you get when you give a room full of highly trained musicians permission to abandon their training simultaneously.",
+      "category": "music",
+      "tags": [],
+      "created": "2026-04-13T04:59:40.447Z",
+      "modified": "2026-04-13T04:59:40.447Z",
+      "url": "posts/the-source-code-of-everything-the-beatles-the-forge-and-the-technology-that-changed-the-world.html"
+    },
+    {
       "slug": "the-nuclear-reactor-and-the-bagel-why-ai-is-going-to-burn-the-world-down-before-it-figures-itself-out",
       "title": "The Nuclear Reactor and the Bagel: Why AI Is Going to Burn the World Down Before It Figures Itself Out",
-      "excerpt": "The current era of artificial intelligence is being built on a foundation that every honest engineer admits is unsound. The architecture is a brute-force hack, not an elegant solution. The hardware is the wrong shape for the software. The energy costs are not a temporary growing pain — they are a structural consequence of eliminating the gates that made traditional computing efficient.",
+      "excerpt": "The current era of artificial intelligence is being built on a foundation that every honest engineer admits is unsound. The architecture is a brute-force hack, not an elegant solution. The hardware is the wrong shape for the software. The energy costs are not a temporary growing pain â they are a structural consequence of eliminating the gates that made traditional computing efficient.",
       "category": "tech",
       "tags": [],
       "created": "2026-04-12T04:10:41.171Z",
