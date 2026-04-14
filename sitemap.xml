@@ -6,10 +6,16 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://blog.fluidfortune.com/posts/the-forge-the-new-peace-treaty-vibe-coders-legacy-coders-and-the-ai-that-needs-both.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://blog.fluidfortune.com/posts/the-source-code-of-everything-the-beatles-the-forge-and-the-technology-that-changed-the-world.html</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://blog.fluidfortune.com/posts/the-nuclear-reactor-and-the-bagel.html</loc>
