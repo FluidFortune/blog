@@ -7,13 +7,22 @@
     <link>https://blog.fluidfortune.com</link>
     <description>Technical deep-dives, opinions, and dispatches from the forge. No SEO bait. No sponsored content. Just signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Apr 2026 21:51:13 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2026 21:14:52 GMT</lastBuildDate>
     <atom:link href="https://blog.fluidfortune.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://fluidfortune.com/courtjester.jpg</url>
       <title>Fluid Fortune — Field Notes</title>
       <link>https://blog.fluidfortune.com</link>
     </image>
+  <item>
+    <title><![CDATA[Bending the Code: A Meal, a Kitchen Wizard, and Why Tacos La Villa Is the Future of Everything]]></title>
+    <link>https://blog.fluidfortune.com/posts/bending-the-code-a-meal-a-kitchen-wizard-and-why-tacos-la-villa-is-the-future-of-everything.html</link>
+    <guid isPermaLink="true">https://blog.fluidfortune.com/posts/bending-the-code-a-meal-a-kitchen-wizard-and-why-tacos-la-villa-is-the-future-of-everything.html</guid>
+    <pubDate>Wed, 22 Apr 2026 21:14:11 GMT</pubDate>
+    <description><![CDATA[When Aleja Bautista-Abad and her partner Luz opened Tacos La Villa La Verne, something was immediately different. I remember noticing it before I'd even eaten there. The energy was different. The space felt intentional.]]></description>
+    <category>culture</category>
+    
+  </item>
   <item>
     <title><![CDATA[The Forge | The New Peace Treaty: Vibe Coders, Legacy Coders, and the AI That Needs Both]]></title>
     <link>https://blog.fluidfortune.com/posts/the-forge-the-new-peace-treaty-vibe-coders-legacy-coders-and-the-ai-that-needs-both.html</link>
