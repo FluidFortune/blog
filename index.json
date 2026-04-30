@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "the-crash-you-havent-had-yet",
+      "title": "The Crash You Haven't Had Yet",
+      "excerpt": "If you have spent any time building for the ESP32-S3, you know exactly how fragmented the hardware space is. It is a Wild West of random development boards, mismatched screens, undocumented pinouts, and spaghetti-wire prototypes where half the community documentation is a three-year-old forum post that ends with \"I figured it out, never mind.\"\n\nThat is exactly why what Quero, Luismi, and the Kode team have built is truly remarkable.\n\nThey did not just build another dev board. They built a consistent, beautifully designed, and well-documented pocket computer for makers.",
+      "category": "tech",
+      "tags": [],
+      "created": "2026-04-30T05:27:56.581Z",
+      "modified": "2026-04-30T05:27:56.581Z",
+      "url": "posts/the-crash-you-havent-had-yet.html"
+    },
+    {
       "slug": "bending-the-code-a-meal-a-kitchen-wizard-and-why-tacos-la-villa-is-the-future-of-everything",
       "title": "Bending the Code: A Meal, a Kitchen Wizard, and Why Tacos La Villa Is the Future of Everything",
       "excerpt": "When Aleja Bautista-Abad and her partner Luz opened Tacos La Villa La Verne, something was immediately different. I remember noticing it before I'd even eaten there. The energy was different. The space felt intentional.",
@@ -13,7 +23,7 @@
     {
       "slug": "the-forge-the-new-peace-treaty-vibe-coders-legacy-coders-and-the-ai-that-needs-both",
       "title": "The Forge | The New Peace Treaty: Vibe Coders, Legacy Coders, and the AI That Needs Both",
-      "excerpt": "Steve Jobs didn't change technology because he was his co-founder's equal as an engineer. He changed technology because he kept asking: why can't it do that?\n\nMost vibe coders will fall off. The technical debt of their haunted-house code â code that looks functional until you turn on the lights and discover the plumbing isn't connected to anything â will collapse under its own weight. But some will change the world.\n\nAnd here is the critical point: they're going to need those old-school traditionalists. To question them. To guide them. To take their concepts and make them structurally sound.\n\nThe legacy coder provides the skeleton. The vibe coder provides the soul.\n\nNeither one, working alone with an AI, produces something worth trusting.",
+      "excerpt": "Steve Jobs didn't change technology because he was his co-founder's equal as an engineer. He changed technology because he kept asking: why can't it do that?\n\nMost vibe coders will fall off. The technical debt of their haunted-house code Ã¢ÂÂ code that looks functional until you turn on the lights and discover the plumbing isn't connected to anything Ã¢ÂÂ will collapse under its own weight. But some will change the world.\n\nAnd here is the critical point: they're going to need those old-school traditionalists. To question them. To guide them. To take their concepts and make them structurally sound.\n\nThe legacy coder provides the skeleton. The vibe coder provides the soul.\n\nNeither one, working alone with an AI, produces something worth trusting.",
       "category": "tech",
       "tags": [],
       "created": "2026-04-14T04:27:22.948Z",
@@ -33,7 +43,7 @@
     {
       "slug": "the-nuclear-reactor-and-the-bagel-why-ai-is-going-to-burn-the-world-down-before-it-figures-itself-out",
       "title": "The Nuclear Reactor and the Bagel: Why AI Is Going to Burn the World Down Before It Figures Itself Out",
-      "excerpt": "The current era of artificial intelligence is being built on a foundation that every honest engineer admits is unsound. The architecture is a brute-force hack, not an elegant solution. The hardware is the wrong shape for the software. The energy costs are not a temporary growing pain ÃÂ¢ÃÂÃÂ they are a structural consequence of eliminating the gates that made traditional computing efficient.",
+      "excerpt": "The current era of artificial intelligence is being built on a foundation that every honest engineer admits is unsound. The architecture is a brute-force hack, not an elegant solution. The hardware is the wrong shape for the software. The energy costs are not a temporary growing pain ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ they are a structural consequence of eliminating the gates that made traditional computing efficient.",
       "category": "tech",
       "tags": [],
       "created": "2026-04-12T04:10:41.171Z",
