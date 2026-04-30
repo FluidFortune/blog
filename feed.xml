@@ -7,13 +7,26 @@
     <link>https://blog.fluidfortune.com</link>
     <description>Technical deep-dives, opinions, and dispatches from the forge. No SEO bait. No sponsored content. Just signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Apr 2026 21:14:52 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 05:28:00 GMT</lastBuildDate>
     <atom:link href="https://blog.fluidfortune.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://fluidfortune.com/courtjester.jpg</url>
       <title>Fluid Fortune — Field Notes</title>
       <link>https://blog.fluidfortune.com</link>
     </image>
+  <item>
+    <title><![CDATA[The Crash You Haven't Had Yet]]></title>
+    <link>https://blog.fluidfortune.com/posts/the-crash-you-havent-had-yet.html</link>
+    <guid isPermaLink="true">https://blog.fluidfortune.com/posts/the-crash-you-havent-had-yet.html</guid>
+    <pubDate>Thu, 30 Apr 2026 05:27:56 GMT</pubDate>
+    <description><![CDATA[If you have spent any time building for the ESP32-S3, you know exactly how fragmented the hardware space is. It is a Wild West of random development boards, mismatched screens, undocumented pinouts, and spaghetti-wire prototypes where half the community documentation is a three-year-old forum post that ends with "I figured it out, never mind."
+
+That is exactly why what Quero, Luismi, and the Kode team have built is truly remarkable.
+
+They did not just build another dev board. They built a consistent, beautifully designed, and well-documented pocket computer for makers.]]></description>
+    <category>tech</category>
+    
+  </item>
   <item>
     <title><![CDATA[Bending the Code: A Meal, a Kitchen Wizard, and Why Tacos La Villa Is the Future of Everything]]></title>
     <link>https://blog.fluidfortune.com/posts/bending-the-code-a-meal-a-kitchen-wizard-and-why-tacos-la-villa-is-the-future-of-everything.html</link>
@@ -30,7 +43,7 @@
     <pubDate>Tue, 14 Apr 2026 04:27:22 GMT</pubDate>
     <description><![CDATA[Steve Jobs didn't change technology because he was his co-founder's equal as an engineer. He changed technology because he kept asking: why can't it do that?
 
-Most vibe coders will fall off. The technical debt of their haunted-house code â code that looks functional until you turn on the lights and discover the plumbing isn't connected to anything â will collapse under its own weight. But some will change the world.
+Most vibe coders will fall off. The technical debt of their haunted-house code Ã¢ÂÂ code that looks functional until you turn on the lights and discover the plumbing isn't connected to anything Ã¢ÂÂ will collapse under its own weight. But some will change the world.
 
 And here is the critical point: they're going to need those old-school traditionalists. To question them. To guide them. To take their concepts and make them structurally sound.
 
@@ -54,7 +67,7 @@ Neither one, working alone with an AI, produces something worth trusting.]]></de
     <link>https://blog.fluidfortune.com/posts/the-nuclear-reactor-and-the-bagel.html</link>
     <guid isPermaLink="true">https://blog.fluidfortune.com/posts/the-nuclear-reactor-and-the-bagel.html</guid>
     <pubDate>Sun, 12 Apr 2026 04:10:41 GMT</pubDate>
-    <description><![CDATA[The current era of artificial intelligence is being built on a foundation that every honest engineer admits is unsound. The architecture is a brute-force hack, not an elegant solution. The hardware is the wrong shape for the software. The energy costs are not a temporary growing pain ÃÂ¢ÃÂÃÂ they are a structural consequence of eliminating the gates that made traditional computing efficient.]]></description>
+    <description><![CDATA[The current era of artificial intelligence is being built on a foundation that every honest engineer admits is unsound. The architecture is a brute-force hack, not an elegant solution. The hardware is the wrong shape for the software. The energy costs are not a temporary growing pain ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ they are a structural consequence of eliminating the gates that made traditional computing efficient.]]></description>
     <category>tech</category>
     
   </item>
