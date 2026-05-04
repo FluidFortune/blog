@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "the-box-how-pisces-moon-os-got-started",
+      "title": "The Box: How Pisces Moon OS Got Started",
+      "excerpt": "A box arrived from Shenzhen with a $96 device in it. Everyone who bought one looked at it and saw a field tool. I looked at it and saw something else.",
+      "category": "tech",
+      "tags": [],
+      "created": "2026-05-04T14:31:59.484Z",
+      "modified": "2026-05-04T14:31:59.484Z",
+      "url": "posts/the-box-how-pisces-moon-os-got-started.html"
+    },
+    {
       "slug": "the-crash-you-havent-had-yet",
       "title": "The Crash You Haven't Had Yet",
       "excerpt": "If you have spent any time building for the ESP32-S3, you know exactly how fragmented the hardware space is. It is a Wild West of random development boards, mismatched screens, undocumented pinouts, and spaghetti-wire prototypes where half the community documentation is a three-year-old forum post that ends with \"I figured it out, never mind.\"\n\nThat is exactly why what Quero, Luismi, and the Kode team have built is truly remarkable.\n\nThey did not just build another dev board. They built a consistent, beautifully designed, and well-documented pocket computer for makers.",
@@ -23,7 +33,7 @@
     {
       "slug": "the-forge-the-new-peace-treaty-vibe-coders-legacy-coders-and-the-ai-that-needs-both",
       "title": "The Forge | The New Peace Treaty: Vibe Coders, Legacy Coders, and the AI That Needs Both",
-      "excerpt": "Steve Jobs didn't change technology because he was his co-founder's equal as an engineer. He changed technology because he kept asking: why can't it do that?\n\nMost vibe coders will fall off. The technical debt of their haunted-house code Ã¢ÂÂ code that looks functional until you turn on the lights and discover the plumbing isn't connected to anything Ã¢ÂÂ will collapse under its own weight. But some will change the world.\n\nAnd here is the critical point: they're going to need those old-school traditionalists. To question them. To guide them. To take their concepts and make them structurally sound.\n\nThe legacy coder provides the skeleton. The vibe coder provides the soul.\n\nNeither one, working alone with an AI, produces something worth trusting.",
+      "excerpt": "Steve Jobs didn't change technology because he was his co-founder's equal as an engineer. He changed technology because he kept asking: why can't it do that?\n\nMost vibe coders will fall off. The technical debt of their haunted-house code ÃÂ¢ÃÂÃÂ code that looks functional until you turn on the lights and discover the plumbing isn't connected to anything ÃÂ¢ÃÂÃÂ will collapse under its own weight. But some will change the world.\n\nAnd here is the critical point: they're going to need those old-school traditionalists. To question them. To guide them. To take their concepts and make them structurally sound.\n\nThe legacy coder provides the skeleton. The vibe coder provides the soul.\n\nNeither one, working alone with an AI, produces something worth trusting.",
       "category": "tech",
       "tags": [],
       "created": "2026-04-14T04:27:22.948Z",
@@ -43,7 +53,7 @@
     {
       "slug": "the-nuclear-reactor-and-the-bagel-why-ai-is-going-to-burn-the-world-down-before-it-figures-itself-out",
       "title": "The Nuclear Reactor and the Bagel: Why AI Is Going to Burn the World Down Before It Figures Itself Out",
-      "excerpt": "The current era of artificial intelligence is being built on a foundation that every honest engineer admits is unsound. The architecture is a brute-force hack, not an elegant solution. The hardware is the wrong shape for the software. The energy costs are not a temporary growing pain ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ they are a structural consequence of eliminating the gates that made traditional computing efficient.",
+      "excerpt": "The current era of artificial intelligence is being built on a foundation that every honest engineer admits is unsound. The architecture is a brute-force hack, not an elegant solution. The hardware is the wrong shape for the software. The energy costs are not a temporary growing pain ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ they are a structural consequence of eliminating the gates that made traditional computing efficient.",
       "category": "tech",
       "tags": [],
       "created": "2026-04-12T04:10:41.171Z",
