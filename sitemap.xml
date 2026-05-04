@@ -6,10 +6,16 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://blog.fluidfortune.com/posts/the-box-how-pisces-moon-os-got-started.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://blog.fluidfortune.com/posts/the-crash-you-havent-had-yet.html</loc>
     <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://blog.fluidfortune.com/posts/bending-the-code-a-meal-a-kitchen-wizard-and-why-tacos-la-villa-is-the-future-of-everything.html</loc>
