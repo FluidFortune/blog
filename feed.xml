@@ -7,13 +7,22 @@
     <link>https://blog.fluidfortune.com</link>
     <description>Technical deep-dives, opinions, and dispatches from the forge. No SEO bait. No sponsored content. Just signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Apr 2026 05:28:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 14:32:04 GMT</lastBuildDate>
     <atom:link href="https://blog.fluidfortune.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://fluidfortune.com/courtjester.jpg</url>
       <title>Fluid Fortune — Field Notes</title>
       <link>https://blog.fluidfortune.com</link>
     </image>
+  <item>
+    <title><![CDATA[The Box: How Pisces Moon OS Got Started]]></title>
+    <link>https://blog.fluidfortune.com/posts/the-box-how-pisces-moon-os-got-started.html</link>
+    <guid isPermaLink="true">https://blog.fluidfortune.com/posts/the-box-how-pisces-moon-os-got-started.html</guid>
+    <pubDate>Mon, 04 May 2026 14:31:59 GMT</pubDate>
+    <description><![CDATA[A box arrived from Shenzhen with a $96 device in it. Everyone who bought one looked at it and saw a field tool. I looked at it and saw something else.]]></description>
+    <category>tech</category>
+    
+  </item>
   <item>
     <title><![CDATA[The Crash You Haven't Had Yet]]></title>
     <link>https://blog.fluidfortune.com/posts/the-crash-you-havent-had-yet.html</link>
@@ -43,7 +52,7 @@ They did not just build another dev board. They built a consistent, beautifully 
     <pubDate>Tue, 14 Apr 2026 04:27:22 GMT</pubDate>
     <description><![CDATA[Steve Jobs didn't change technology because he was his co-founder's equal as an engineer. He changed technology because he kept asking: why can't it do that?
 
-Most vibe coders will fall off. The technical debt of their haunted-house code Ã¢ÂÂ code that looks functional until you turn on the lights and discover the plumbing isn't connected to anything Ã¢ÂÂ will collapse under its own weight. But some will change the world.
+Most vibe coders will fall off. The technical debt of their haunted-house code ÃÂ¢ÃÂÃÂ code that looks functional until you turn on the lights and discover the plumbing isn't connected to anything ÃÂ¢ÃÂÃÂ will collapse under its own weight. But some will change the world.
 
 And here is the critical point: they're going to need those old-school traditionalists. To question them. To guide them. To take their concepts and make them structurally sound.
 
@@ -67,7 +76,7 @@ Neither one, working alone with an AI, produces something worth trusting.]]></de
     <link>https://blog.fluidfortune.com/posts/the-nuclear-reactor-and-the-bagel.html</link>
     <guid isPermaLink="true">https://blog.fluidfortune.com/posts/the-nuclear-reactor-and-the-bagel.html</guid>
     <pubDate>Sun, 12 Apr 2026 04:10:41 GMT</pubDate>
-    <description><![CDATA[The current era of artificial intelligence is being built on a foundation that every honest engineer admits is unsound. The architecture is a brute-force hack, not an elegant solution. The hardware is the wrong shape for the software. The energy costs are not a temporary growing pain ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ they are a structural consequence of eliminating the gates that made traditional computing efficient.]]></description>
+    <description><![CDATA[The current era of artificial intelligence is being built on a foundation that every honest engineer admits is unsound. The architecture is a brute-force hack, not an elegant solution. The hardware is the wrong shape for the software. The energy costs are not a temporary growing pain ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ they are a structural consequence of eliminating the gates that made traditional computing efficient.]]></description>
     <category>tech</category>
     
   </item>
