@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Box: How Pisces Moon OS Got Started | Fluid Fortune</title>
+  <meta name="description" content="A box arrived from Shenzhen with a $96 device in it. Everyone who bought one looked at it and saw a field tool. I looked at it and saw something else.">
+  <link rel="canonical" href="https://blog.fluidfortune.com/posts/the-box-how-pisces-moon-os-got-started.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://blog.fluidfortune.com/posts/the-box-how-pisces-moon-os-got-started.html">
+  <meta property="og:title" content="The Box: How Pisces Moon OS Got Started">
+  <meta property="og:description" content="A box arrived from Shenzhen with a $96 device in it. Everyone who bought one looked at it and saw a field tool. I looked at it and saw something else.">
+  <meta property="og:site_name" content="Fluid Fortune">
+  <meta property="article:published_time" content="2026-05-04T14:31:59.484Z">
+  <meta property="article:modified_time" content="2026-05-04T14:31:59.484Z">
+  <meta property="article:tag" content="">
+  <meta property="article:section" content="tech">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The Box: How Pisces Moon OS Got Started",
+    "description": "A box arrived from Shenzhen with a $96 device in it. Everyone who bought one looked at it and saw a field tool. I looked at it and saw something else.",
+    "url": "https://blog.fluidfortune.com/posts/the-box-how-pisces-moon-os-got-started.html",
+    "datePublished": "2026-05-04T14:31:59.484Z",
+    "dateModified": "2026-05-04T14:31:59.484Z",
+    "author": {
+      "@type": "Organization",
+      "name": "Fluid Fortune",
+      "url": "https://fluidfortune.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Fluid Fortune",
+      "url": "https://fluidfortune.com"
+    },
+    "keywords": "",
+    "articleSection": "tech",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Fluid Fortune Blog",
+      "url": "https://blog.fluidfortune.com"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&family=Inter:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&family=Inter:wght@400;500&display=swap"></noscript>
+  <style>
+    :root {
+      --black:#050a05;--deep:#0d1117;--surface:#161b22;--border:#30363d;
+      --green:#00ff41;--green-dim:#00c032;--green-mute:#1a3a1a;
+      --amber:#ffb700;--blue:#58a6ff;--red:#f85149;
+      --text:#e6edf3;--text-dim:#8b949e;--text-muted:#484f58;
+      --font-mono:'Share Tech Mono',monospace;
+      --font-ui:'Inter',sans-serif;
+      --font-disp:'Orbitron',monospace;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--deep);color:var(--text);font-family:var(--font-ui);line-height:1.8;font-size:1rem}
+    nav{background:var(--black);border-bottom:1px solid var(--border);padding:.75rem 1.5rem;display:flex;align-items:center;gap:1rem}
+    nav a{font-family:var(--font-disp);font-size:.8rem;color:var(--green);text-decoration:none;letter-spacing:.12em}
+    nav .back{color:var(--text-dim);font-family:var(--font-mono);font-size:.72rem}
+    nav .back:hover{color:var(--green)}
+    .post{max-width:740px;margin:0 auto;padding:3rem 1.5rem}
+    .post-meta{font-family:var(--font-mono);font-size:.65rem;color:var(--text-muted);letter-spacing:.1em;margin-bottom:.5rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+    .post-meta .cat{color:var(--green-dim);border:1px solid var(--green-mute);padding:.1rem .5rem}
+    .post-meta .tag-pill{color:var(--text-muted);border:1px solid var(--border);padding:.1rem .5rem}
+    .post-edited{font-family:var(--font-mono);font-size:.58rem;color:var(--text-muted);margin-bottom:1.5rem;font-style:italic}
+    h1.post-title{font-family:var(--font-disp);font-size:clamp(1.4rem,4vw,2rem);color:#fff;margin-bottom:1rem;letter-spacing:.04em;font-weight:900}
+    .post-body h1{font-family:var(--font-disp);font-size:1.5rem;color:#fff;margin:2rem 0 .75rem;letter-spacing:.04em}
+    .post-body h2{font-family:var(--font-disp);font-size:1.1rem;color:var(--green-dim);margin:1.5rem 0 .5rem;letter-spacing:.06em}
+    .post-body h3{font-size:1rem;font-weight:600;color:var(--text);margin:1.2rem 0 .4rem}
+    .post-body p{margin-bottom:1rem}
+    .post-body b,.post-body strong{color:#fff}
+    .post-body i,.post-body em{color:var(--text-dim)}
+    .post-body a{color:var(--blue);text-decoration:underline}
+    .post-body blockquote{border-left:3px solid var(--green-dim);margin:1.5rem 0;padding:.75rem 1rem;background:var(--surface);color:var(--text-dim);font-style:italic}
+    .post-body pre{background:var(--black);border:1px solid var(--border);border-radius:4px;padding:1rem;overflow-x:auto;margin:1rem 0;font-size:.85rem;color:var(--green);font-family:var(--font-mono);line-height:1.6}
+    .post-body code{font-family:var(--font-mono);background:var(--black);border:1px solid var(--border);border-radius:3px;padding:2px 5px;font-size:.85em;color:var(--amber)}
+    .post-body pre code{background:none;border:none;padding:0;color:var(--green)}
+    .post-body img{max-width:100%;border:1px solid var(--border);border-radius:4px;margin:1rem 0;display:block}
+    .post-body ul,.post-body ol{padding-left:1.5rem;margin-bottom:1rem}
+    .post-body li{margin-bottom:.3rem}
+    .embed-wrap{position:relative;padding-bottom:56.25%;height:0;margin:1.5rem 0;background:var(--black);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+    .embed-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    footer{border-top:1px solid var(--border);margin-top:4rem;padding:2rem 1.5rem;text-align:center;font-family:var(--font-mono);font-size:.65rem;color:var(--text-muted)}
+    footer a{color:var(--green-dim)}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="https://fluidfortune.com">FLUID FORTUNE</a>
+    <a href="https://blog.fluidfortune.com" class="back">← BLOG</a>
+  </nav>
+  <article class="post">
+    <div class="post-meta">
+      <span>May 4, 2026</span>
+      <span class="cat">TECH</span>
+      
+    </div>
+    
+    <h1 class="post-title">The Box: How Pisces Moon OS Got Started</h1>
+    <div class="post-body"><p>A box arrived from Shenzhen on a Tuesday in late March. Inside was a LilyGO T-Deck Plus — $96, from AliExpress, two weeks in transit. ESP32-S3 dual-core. 8MB PSRAM. WiFi, Bluetooth LE, LoRa long-range radio, GPS. A 320×240 IPS color touchscreen. Most importantly: a physical QWERTY keyboard with backlit keys, and a trackball that clicked when you pressed it.</p>
+<p>I plugged it in. It booted to a default firmware that did a few isolated demos. WiFi scanner. LoRa ping test. GPS readout. Each demo was its own thing. Press a button, see a thing. Done.</p>
+<p>I closed the demo and stared at the device.</p>
+<p>It looked exactly like a BlackBerry. A little chubbier. The trackball where the BlackBerry had its own. The keyboard layout was the same. The screen was a little smaller. If you squinted, it could have been a Palm Pilot from 2003 — same general silhouette, same handheld pocket-computer instinct in the design.</p>
+<p>Everyone in the maker community who bought one of these — and there are thousands — looked at it and saw a field tool. A wardriving gadget. A mesh radio terminal. A security toy. The community built single-function firmware projects for it, each one impressive in its narrow domain. Bruce. Meshtastic. Tactility. Each project did one thing, did it well, and called it a day.</p>
+<p>I looked at the same device and could not stop seeing the BlackBerry.</p>
+<h2>The Question</h2>
+<p>What if you put a real OS on this thing?</p>
+<p>Not a single-purpose firmware. An actual operating system. With a launcher. With apps. With multitasking. The way a BlackBerry had email and a calendar and a browser and games, all running on a device with way less computing power than this $50 microcontroller from 2024.</p>
+<p>The hardware was already there. Two cores at 240MHz. 8MB of PSRAM. Hardware crypto. A working filesystem on the SD card. Wireless radios in three different bands. The device had everything a Palm Pilot had in 2003, plus things a Palm Pilot would have killed for — wireless internet, GPS, encrypted storage, dual-core processing.</p>
+<p>Why was nobody treating it like a pocket computer?</p>
+<p>I think the answer is that the maker community had been culturally trained to see microcontrollers as single-purpose devices. You build a thing that does one thing. You don't build an OS, because microcontrollers don't run operating systems — that's what Linux is for, and Linux runs on Raspberry Pis.</p>
+<p>Except this microcontroller, the ESP32-S3, has more capability than most computers from the year 2010. The cultural assumption that microcontrollers are single-purpose was about ten years out of date. Nobody had updated it because nobody had needed to update it. The available firmware projects matched the available cultural template — single function, focused implementation, narrow scope.</p>
+<p>The hardware was waiting for someone to ask a different question.</p>
+<h2>The Insight</h2>
+<p>Once I framed the device as a BlackBerry instead of a security tool, every architectural decision flipped.</p>
+<p>A BlackBerry runs apps. Not one app — many apps. You launch them from a launcher. They have icons. They share a filesystem. They have settings. The OS handles input routing, screen rendering, and persistent state.</p>
+<p>A BlackBerry does things in the background. Email syncs while you read calendar entries. The radio listens for incoming messages while you write a note. The system clock keeps time while you play Brick Breaker. Background tasks were not optional in the BlackBerry era — they were the entire point of having a smartphone instead of a feature phone.</p>
+<p>A BlackBerry has security. The Ghost Partition concept came from thinking about what a 2026 BlackBerry would do — not encrypt files (which was the 2003 answer), but architecturally hide that there were any files to encrypt (which is the 2026 answer when you assume your adversary has access to the hardware).</p>
+<p>Every feature I built into Pisces Moon OS came from asking: "What would a BlackBerry from now do, if BlackBerry had survived and been built by people who took adversarial threat models seriously?"</p>
+<p>The Ghost Engine — wardriving running on Core 0 in the background while the operator does anything else on Core 1 — is the BlackBerry email-sync answer applied to RF intelligence. It runs because that is what background tasks are for. The user is not interrupted because that is what good operating systems do.</p>
+<p>The 47 applications across 7 categories — each launching from a categorized grid, each persisting state, each working with the others — is the BlackBerry app drawer applied to a security-research handheld.</p>
+<p>The trackball-and-keyboard input model — where the trackball navigates the launcher and the keyboard types in apps — is exactly the BlackBerry input model. The hardware was already laid out this way. The default firmware just wasn't using it.</p>
+<h2>What Got Built</h2>
+<p>Once I started actually building, I hit problems that did not exist in any documentation. The MicroSD card and the LoRa radio share the SPI bus on this hardware. When the Ghost Engine writes wardrive data to the SD card and the LoRa radio fires at the same time, the device crashes. Not occasionally. Reliably, but with non-deterministic timing — the crash address changes every time, making it look like memory corruption or random bugs.</p>
+<p>This had no documented solution because no previous ESP32-S3 project ran the SD card and the LoRa radio under sustained simultaneous load. Every previous project did one thing. The conflict was invisible until you needed both at once.</p>
+<p>The solution turned out to be a formal protocol. Not a patch. A protocol — four rules every component in the OS must obey. Hit and run on bus access. No extended holds. Radio traffic flag. Metadata-only destructive operations. I ended up calling it the SPI Bus Treaty because that's what it is — a behavioral contract between competing subsystems sharing a hardware resource.</p>
+<p>The historical precedent was right there once I named it. Unix filesystem locking conventions in the 1970s. The Apollo Guidance Computer's priority scheduler in 1969. Nintendo's N64 RSP time budget in 1996. In each case, the answer to "competing subsystems sharing a critical hardware resource" was not a clever patch — it was a named protocol that everyone agreed to follow. The SPI Bus Treaty is the same kind of solution applied to ESP32-S3 hardware. It's now the first documented instance of this solution class for this platform.</p>
+<p>That's one of six engineering problems I had to solve to build the OS. None of them existed in prior documentation. None of them had been encountered by previous projects because no previous project had been complex enough to trigger them.</p>
+<h2>The Reframe</h2>
+<p>Looking back at the box on the table, the thing that should bother every maker who bought one of these and built single-function firmware on it is not that they didn't think of the SPI Bus Treaty. The Treaty came from the engineering — it solved a problem that only emerged because of the architecture choice. You would not invent the Treaty without first deciding to build the OS that needs it.</p>
+<p>What should bother them is that they all looked at the same hardware and didn't think "this is a BlackBerry."</p>
+<p>The reframe was free. It cost zero dollars and took five minutes of staring at the device. The device was already a pocket computer with a keyboard, a screen, a trackball, three radios, GPS, and 8MB of RAM. Treating it like a single-purpose tool was a choice — and once you made that choice, every subsequent architectural decision was constrained by it. No multitasking. No app launcher. No background tasks. No platform.</p>
+<p>The whole maker community made that choice without knowing they were making it. The cultural template was so strong that nobody questioned it.</p>
+<p>I questioned it on a Tuesday in late March, because a BlackBerry sat on my desk in a box from Shenzhen and I refused to pretend I was looking at something else.</p>
+<h2>What's Next</h2>
+<p>Pisces Moon OS shipped v1.0.0 "The Arsenal" on April 16, 2026 — six weeks after the box arrived. v1.0.1 followed two weeks later with the SPI Bus Treaty refinements and a few bug fixes. Both are public on GitHub under AGPL-3.0. The full source compiles with PlatformIO. The white paper documents the architecture. The Defcon 34 talk submission is in.</p>
+<p>The platform now extends to five deployment targets — T-Deck Plus, Pisces Moon Linux on obsolete x86/ARM hardware, Android APK, Luckfox Pico 86 Panel, M5Stack Cardputer. The original box from Shenzhen turned out to be the proof of concept for something much bigger than the device itself.</p>
+<p>The total cost of building all of this from scratch was $144 — $96 for the device, $8 for an SD card, $40 in cloud AI to help debug the harder problems. Six weeks. One person. The receipt is on the internet.</p>
+<p>The Ghost Engine never stops. The SPI Bus Treaty is why. The receipt is $144.</p>
+<p>The box is still on my desk.</p>
+<hr>
+<p><em>Eric Becker / Fluid Fortune</em>
+<em>The Court Jester of Vibe Coding</em>
+<em>fluidfortune.com</em></p>
+    </div>
+  </article>
+  <footer>
+    <p><a href="https://fluidfortune.com">FLUID FORTUNE</a> &nbsp;|&nbsp; LOCAL INTELLIGENCE</p>
+  </footer>
+</body>
+</html>
