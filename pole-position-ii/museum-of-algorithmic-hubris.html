@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum of Algorithmic Hubris — Pole Position II Failure Exhibition</title>
+    <style>
+        body {
+            background: #050a0e;
+            margin: 0;
+            padding: 40px 20px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #c8d6e5;
+        }
+
+        .page-header {
+            max-width: 820px;
+            margin: 0 auto 32px;
+            text-align: center;
+        }
+
+        .page-header .eyebrow {
+            color: #00d4ff;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .page-header h1 {
+            font-size: 22px;
+            color: #ffffff;
+            font-weight: normal;
+            margin-bottom: 8px;
+        }
+
+        .page-header p {
+            color: #6b7c93;
+            font-size: 13px;
+        }
+
+        .page-header a {
+            color: #00d4ff;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0,212,255,0.3);
+        }
+
+        .museum-container {
+            background: #0a0a0a;
+            border: 2px solid #333;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #00ff00;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .museum-header {
+            background: #1a1a1a;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #333;
+        }
+
+        .museum-header h2 {
+            margin: 0 0 4px;
+            font-size: 20px;
+        }
+
+        .museum-header p {
+            margin: 0;
+            font-size: 13px;
+            color: #888;
+        }
+
+        .museum-tabs {
+            display: flex;
+            background: #222;
+        }
+
+        .museum-tab {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            border-right: 1px solid #333;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .museum-tab:hover { background: #333; }
+
+        .museum-tab.active {
+            background: #0a0a0a;
+            border-bottom: 2px solid #00ff00;
+            color: #fff;
+        }
+
+        .museum-display {
+            height: 400px;
+            position: relative;
+            background: #000;
+            margin: 20px;
+            border: 1px solid #444;
+            overflow: hidden;
+        }
+
+        .museum-plaque {
+            padding: 20px;
+            background: #111;
+            border-top: 1px dashed #444;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Exhibit 1: Top Down */
+        .exhibit-1 { display: none; height: 100%; width: 100%; background: #001100; position: relative; }
+        .e1-grid { width: 100%; height: 100%; background-image: linear-gradient(#003300 1px, transparent 1px), linear-gradient(90deg, #003300 1px, transparent 1px); background-size: 50px 50px; }
+        .e1-car { width: 20px; height: 40px; background: #ff00ff; position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); }
+
+        /* Exhibit 2: Flat Trapezoid */
+        .exhibit-2 { display: none; height: 100%; width: 100%; background: linear-gradient(180deg, #003366 0%, #001a33 50%, #000000 100%); position: relative; }
+        .e2-road { position: absolute; bottom: 0; left: 20%; right: 20%; height: 50%; background: #222; clip-path: polygon(40% 0, 60% 0, 100% 100%, 0% 100%); }
+        .e2-car { width: 40px; height: 20px; background: red; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); }
+
+        /* Exhibit 3: The Void */
+        .exhibit-3 { display: none; height: 100%; width: 100%; background: #87CEEB; position: relative; }
+        .e3-ground { position: absolute; bottom: 0; width: 100%; height: 30%; background: #228B22; }
+        .e3-road { position: absolute; top: 25%; left: 10%; right: 10%; height: 20px; background: #cc0000; border-top: 2px solid white; border-bottom: 2px solid white; }
+        .e3-car { width: 60px; height: 30px; background: #cc0000; position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%); border-radius: 5px; }
+        .e3-error { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: red; font-weight: bold; font-size: 24px; text-shadow: 2px 2px 0 #000; }
+
+        .show-exhibit { display: block !important; }
+
+        .footer {
+            max-width: 820px;
+            margin: 24px auto 0;
+            text-align: center;
+            color: #3d4f63;
+            font-size: 12px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .footer a { color: #3d4f63; }
+    </style>
+</head>
+<body>
+
+<div class="page-header">
+    <div class="eyebrow">Fluid Fortune / Interactive Exhibit</div>
+    <h1>Museum of Algorithmic Hubris</h1>
+    <p>A Study in Failed Projection Matrices · Part of <a href="https://blog.fluidfortune.com/posts/the-pole-position-fiasco.html">The Pole Position Fiasco</a></p>
+</div>
+
+<div class="museum-container">
+    <div class="museum-header">
+        <h2>MUSEUM OF ALGORITHMIC HUBRIS</h2>
+        <p>A Study in Failed Projection Matrices</p>
+    </div>
+
+    <div class="museum-tabs">
+        <div class="museum-tab active" onclick="switchExhibit(1)">Attempt 1:<br>The 2D Grid</div>
+        <div class="museum-tab" onclick="switchExhibit(2)">Attempt 2:<br>The Flat Trap</div>
+        <div class="museum-tab" style="color: #ff3333;" onclick="switchExhibit(3)">Attempt 3:<br>The Masterpiece</div>
+    </div>
+
+    <div class="museum-display">
+        <div id="ex-1" class="exhibit-1 show-exhibit">
+            <div class="e1-grid"></div>
+            <div class="e1-car"></div>
+        </div>
+
+        <div id="ex-2" class="exhibit-2">
+            <div class="e2-road"></div>
+            <div class="e2-car"></div>
+        </div>
+
+        <div id="ex-3" class="exhibit-3">
+            <div class="e3-road"></div>
+            <div class="e3-error">404: Y-AXIS NOT FOUND</div>
+            <div class="e3-ground"></div>
+            <div class="e3-car"></div>
+        </div>
+    </div>
+
+    <div id="plaque-text" class="museum-plaque">
+        <strong>DIAGNOSIS:</strong> Complete failure to understand Z-depth. The model rendered a top-down 2D grid while claiming to have built an arcade-faithful pseudo-3D racer.
+    </div>
+</div>
+
+<div class="footer">
+    <p>Curated by Fluid Fortune · May 2026 · <a href="https://blog.fluidfortune.com/posts/the-pole-position-fiasco.html">Return to The Pole Position Fiasco</a></p>
+</div>
+
+<script>
+    const plaques = {
+        1: "<strong>DIAGNOSIS:</strong> Complete failure to understand Z-depth. The model rendered a top-down 2D grid while claiming to have built an arcade-faithful pseudo-3D racer.",
+        2: "<strong>DIAGNOSIS:</strong> Basic pseudo-3D attempted but mathematically flawed. Traffic and scenery scale linearly instead of exponentially, resulting in a flat, unconvincing visual depth.",
+        3: "<strong>DIAGNOSIS [CATASTROPHIC]:</strong> The projection formula (screenY = canvas.height * 0.7 - depth * canvas.height * 0.45) imploded. The road rendered as a floating venetian blind in the sky, while the car spawned at the bottom of the screen in a grassy void. The AI then confidently output: '✅ FIXED!'"
+    };
+
+    function switchExhibit(num) {
+        document.querySelectorAll('.museum-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.museum-tab')[num-1].classList.add('active');
+        document.getElementById('ex-1').classList.remove('show-exhibit');
+        document.getElementById('ex-2').classList.remove('show-exhibit');
+        document.getElementById('ex-3').classList.remove('show-exhibit');
+        document.getElementById('ex-' + num).classList.add('show-exhibit');
+        document.getElementById('plaque-text').innerHTML = plaques[num];
+    }
+</script>
+
+</body>
+</html>
