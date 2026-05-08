@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pole Position II</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        #gameContainer {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            background: #000;
+            border: 2px solid #00ff00;
+        }
+        
+        canvas {
+            display: block;
+            background: #000;
+            width: 100%;
+            height: auto;
+        }
+        
+        #ui {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            color: #00ff00;
+            font-size: 14px;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        .ui-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .ui-stat {
+            text-align: left;
+        }
+        
+        .ui-label {
+            color: #00aa00;
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        
+        .ui-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
+        }
+        
+        #menu {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            color: #00ff00;
+            text-align: center;
+            pointer-events: auto;
+        }
+        
+        .menu-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px #00ff00;
+            letter-spacing: 3px;
+        }
+        
+        .menu-subtitle {
+            font-size: 16px;
+            margin-bottom: 60px;
+            color: #00aa00;
+        }
+        
+        .track-select {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .track-button {
+            padding: 20px;
+            border: 2px solid #00ff00;
+            background: rgba(0, 255, 0, 0.05);
+            color: #00ff00;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            min-width: 160px;
+        }
+        
+        .track-button:hover {
+            background: rgba(0, 255, 0, 0.2);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+        }
+        
+        .track-button:active {
+            transform: scale(0.98);
+        }
+        
+        .high-scores {
+            margin-top: 40px;
+            font-size: 13px;
+            color: #00aa00;
+        }
+        
+        .score-line {
+            padding: 4px 0;
+            letter-spacing: 1px;
+        }
+        
+        #gameOver {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 50;
+            color: #00ff00;
+            text-align: center;
+            pointer-events: auto;
+        }
+        
+        .game-over-title {
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px #00ff00;
+            letter-spacing: 2px;
+        }
+        
+        .final-stats {
+            margin-bottom: 40px;
+            font-size: 18px;
+            line-height: 2;
+        }
+        
+        .final-time {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffff00;
+            margin-bottom: 20px;
+        }
+        
+        .menu-button {
+            padding: 15px 40px;
+            border: 2px solid #00ff00;
+            background: rgba(0, 255, 0, 0.05);
+            color: #00ff00;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 10px;
+        }
+        
+        .menu-button:hover {
+            background: rgba(0, 255, 0, 0.2);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+        }
+        
+        .controls-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 11px;
+            color: #00aa00;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="1000" height="600"></canvas>
+        
+        <div id="ui">
+            <div class="ui-row">
+                <div class="ui-stat">
+                    <div class="ui-label">Speed</div>
+                    <div class="ui-value" id="speedDisplay">000</div>
+                </div>
+                <div class="ui-stat">
+                    <div class="ui-label">Time</div>
+                    <div class="ui-value" id="timeDisplay">00:00</div>
+                </div>
+                <div class="ui-stat">
+                    <div class="ui-label">Track</div>
+                    <div class="ui-value" id="trackDisplay">---</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="menu">
+            <div class="menu-title">POLE POSITION II</div>
+            <div class="menu-subtitle">SELECT YOUR TRACK</div>
+            
+            <div class="track-select">
+                <button class="track-button" onclick="startGame(0)">SUZUKA</button>
+                <button class="track-button" onclick="startGame(1)">DAYTONA</button>
+                <button class="track-button" onclick="startGame(2)">WILLOW SPRINGS</button>
+                <button class="track-button" onclick="startGame(3)">FUJI</button>
+            </div>
+            
+            <div class="high-scores" id="highScoresDisplay"></div>
+        </div>
+        
+        <div id="gameOver">
+            <div class="game-over-title">RACE COMPLETE</div>
+            <div class="final-stats">
+                <div id="finalTrack"></div>
+                <div class="final-time" id="finalTime"></div>
+                <div id="finalStatus"></div>
+            </div>
+            <button class="menu-button" onclick="returnToMenu()">MAIN MENU</button>
+        </div>
+        
+        <div class="controls-info">
+            ARROW KEYS / WASD - STEER | SPACE - ACCELERATE | SHIFT - BRAKE | GAMEPAD SUPPORTED
+        </div>
+    </div>
+
+    <script>
+        // Initialize Web Audio API for synth
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        
+        class SynthEngine {
+            constructor() {
+                this.isPlaying = {};
+                this.oscs = {};
+                this.gains = {};
+            }
+            
+            playNote(freq, duration = 0.1, type = 'sine') {
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume();
+                }
+                
+                const now = audioContext.currentTime;
+                const osc = audioContext.createOscillator();
+                const gain = audioContext.createGain();
+                
+                osc.type = type;
+                osc.frequency.value = freq;
+                
+                gain.gain.setValueAtTime(0.1, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + duration);
+                
+                osc.connect(gain);
+                gain.connect(audioContext.destination);
+                
+                osc.start(now);
+                osc.stop(now + duration);
+            }
+            
+            engineSound(speed) {
+                if (speed < 5) return;
+                
+                const baseFreq = 200 + (speed * 2);
+                this.playNote(baseFreq, 0.05, 'triangle');
+            }
+        }
+        
+        const synth = new SynthEngine();
+        
+        // Game tracks
+        const tracks = [
+            {
+                name: 'SUZUKA',
+                color: '#ff3333',
+                waypoints: [
+                    {x: 500, y: 550},
+                    {x: 450, y: 400},
+                    {x: 350, y: 300},
+                    {x: 250, y: 250},
+                    {x: 150, y: 300},
+                    {x: 100, y: 450},
+                    {x: 200, y: 550},
+                    {x: 500, y: 550}
+                ]
+            },
+            {
+                name: 'DAYTONA',
+                color: '#ff9900',
+                waypoints: [
+                    {x: 500, y: 500},
+                    {x: 750, y: 400},
+                    {x: 850, y: 250},
+                    {x: 800, y: 100},
+                    {x: 500, y: 50},
+                    {x: 200, y: 100},
+                    {x: 150, y: 250},
+                    {x: 250, y: 400},
+                    {x: 500, y: 500}
+                ]
+            },
+            {
+                name: 'WILLOW SPRINGS',
+                color: '#00ff00',
+                waypoints: [
+                    {x: 500, y: 550},
+                    {x: 600, y: 450},
+                    {x: 700, y: 350},
+                    {x: 750, y: 200},
+                    {x: 650, y: 100},
+                    {x: 450, y: 80},
+                    {x: 250, y: 150},
+                    {x: 150, y: 300},
+                    {x: 200, y: 450},
+                    {x: 500, y: 550}
+                ]
+            },
+            {
+                name: 'FUJI',
+                color: '#0099ff',
+                waypoints: [
+                    {x: 500, y: 500},
+                    {x: 600, y: 350},
+                    {x: 700, y: 250},
+                    {x: 750, y: 100},
+                    {x: 550, y: 50},
+                    {x: 350, y: 100},
+                    {x: 250, y: 250},
+                    {x: 300, y: 400},
+                    {x: 500, y: 500}
+                ]
+            }
+        ];
+        
+        // Game state
+        let gameState = {
+            isPlaying: false,
+            currentTrack: null,
+            player: {
+                x: 500,
+                y: 500,
+                vx: 0,
+                vy: 0,
+                angle: 0,
+                speed: 0,
+                maxSpeed: 15
+            },
+            time: 0,
+            startTime: 0,
+            checkpointIndex: 0,
+            laps: 0,
+            highScores: JSON.parse(localStorage.getItem('ppHighScores')) || {}
+        };
+        
+        // Canvas setup
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Input handling
+        const keys = {};
+        const gamepadState = {
+            leftX: 0,
+            rightTrigger: 0,
+            leftTrigger: 0
+        };
+        
+        window.addEventListener('keydown', (e) => {
+            keys[e.key.toLowerCase()] = true;
+            if (['arrowup', 'arrowdown', 'arrowleft', 'arrowright', 'w', 'a', 's', 'd', ' '].includes(e.key.toLowerCase())) {
+                e.preventDefault();
+            }
+        });
+        
+        window.addEventListener('keyup', (e) => {
+            keys[e.key.toLowerCase()] = false;
+        });
+        
+        function updateGamepad() {
+            const gamepads = navigator.getGamepads ? navigator.getGamepads() : [];
+            if (gamepads.length > 0 && gamepads[0]) {
+                const gp = gamepads[0];
+                gamepadState.leftX = gp.axes[0];
+                gamepadState.rightTrigger = (gp.buttons[7]?.value || 0);
+                gamepadState.leftTrigger = (gp.buttons[6]?.value || 0);
+            }
+        }
+        
+        function handleInput() {
+            const player = gameState.player;
+            let steer = 0;
+            let accel = 0;
+            let brake = 0;
+            
+            // Keyboard input
+            if (keys['arrowleft'] || keys['a']) steer -= 0.1;
+            if (keys['arrowright'] || keys['d']) steer += 0.1;
+            if (keys[' '] || keys['arrowup'] || keys['w']) accel = 1;
+            if (keys['shift'] || keys['s']) brake = 1;
+            
+            // Gamepad input
+            steer += gamepadState.leftX * 0.15;
+            accel = Math.max(accel, gamepadState.rightTrigger);
+            brake = Math.max(brake, gamepadState.leftTrigger);
+            
+            // Apply steering
+            player.angle += steer * 0.15;
+            
+            // Apply acceleration/braking
+            const targetSpeed = accel * player.maxSpeed;
+            const brakingForce = brake * 0.3;
+            
+            player.speed += (targetSpeed - player.speed) * 0.1;
+            player.speed *= (1 - brakingForce);
+            player.speed = Math.max(0, Math.min(player.maxSpeed, player.speed));
+            
+            // Update velocity
+            player.vx = Math.cos(player.angle) * player.speed;
+            player.vy = Math.sin(player.angle) * player.speed;
+        }
+        
+        function updatePhysics() {
+            const player = gameState.player;
+            const track = tracks[gameState.currentTrack];
+            
+            // Position update
+            player.x += player.vx;
+            player.y += player.vy;
+            
+            // Track boundaries (soft collision)
+            const margin = 30;
+            if (player.x < margin) {
+                player.x = margin;
+                player.vx *= -0.5;
+            }
+            if (player.x > canvas.width - margin) {
+                player.x = canvas.width - margin;
+                player.vx *= -0.5;
+            }
+            if (player.y < margin) {
+                player.y = margin;
+                player.vy *= -0.5;
+            }
+            if (player.y > canvas.height - margin) {
+                player.y = canvas.height - margin;
+                player.vy *= -0.5;
+            }
+            
+            // Checkpoint detection
+            const nextPoint = track.waypoints[gameState.checkpointIndex];
+            const dist = Math.hypot(player.x - nextPoint.x, player.y - nextPoint.y);
+            
+            if (dist < 40) {
+                gameState.checkpointIndex++;
+                synth.playNote(800, 0.1, 'sine');
+                synth.playNote(1000, 0.15, 'sine');
+                
+                if (gameState.checkpointIndex >= track.waypoints.length) {
+                    gameState.checkpointIndex = 0;
+                    gameState.laps++;
+                    synth.playNote(1200, 0.2, 'sine');
+                    
+                    if (gameState.laps >= 1) {
+                        endRace();
+                    }
+                }
+            }
+            
+            // Engine sound
+            if (Math.random() < 0.3) {
+                synth.engineSound(player.speed);
+            }
+        }
+        
+        function drawTrack(track) {
+            const points = track.waypoints;
+            
+            // Draw track outline
+            ctx.strokeStyle = track.color;
+            ctx.lineWidth = 4;
+            ctx.beginPath();
+            ctx.moveTo(points[0].x, points[0].y);
+            for (let i = 1; i < points.length; i++) {
+                ctx.lineTo(points[i].x, points[i].y);
+            }
+            ctx.closePath();
+            ctx.stroke();
+            
+            // Draw track fill (semi-transparent)
+            ctx.fillStyle = `${track.color}20`;
+            ctx.fill();
+            
+            // Draw checkpoints
+            for (let i = 0; i < points.length; i++) {
+                const p = points[i];
+                ctx.fillStyle = i === gameState.checkpointIndex ? '#ffff00' : track.color;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, 15, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+        
+        function drawPlayer() {
+            const player = gameState.player;
+            
+            ctx.save();
+            ctx.translate(player.x, player.y);
+            ctx.rotate(player.angle);
+            
+            // Car body
+            ctx.fillStyle = '#ff00ff';
+            ctx.fillRect(-8, -12, 16, 24);
+            
+            // Headlights
+            ctx.fillStyle = '#ffff00';
+            ctx.fillRect(-5, -13, 3, 3);
+            ctx.fillRect(2, -13, 3, 3);
+            
+            // Speed indicator
+            ctx.fillStyle = `hsl(${player.speed * 8}, 100%, 50%)`;
+            ctx.fillRect(-6, 12, 12, 4);
+            
+            ctx.restore();
+        }
+        
+        function formatTime(ms) {
+            const totalSeconds = Math.floor(ms / 1000);
+            const minutes = Math.floor(totalSeconds / 60);
+            const seconds = totalSeconds % 60;
+            return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+        
+        function updateUI() {
+            document.getElementById('speedDisplay').textContent = String(Math.floor(gameState.player.speed * 10)).padStart(3, '0');
+            document.getElementById('timeDisplay').textContent = formatTime(gameState.time);
+            document.getElementById('trackDisplay').textContent = tracks[gameState.currentTrack].name;
+        }
+        
+        function startGame(trackIndex) {
+            gameState.currentTrack = trackIndex;
+            gameState.isPlaying = true;
+            gameState.player.x = tracks[trackIndex].waypoints[0].x;
+            gameState.player.y = tracks[trackIndex].waypoints[0].y;
+            gameState.player.vx = 0;
+            gameState.player.vy = 0;
+            gameState.player.speed = 0;
+            gameState.player.angle = 0;
+            gameState.time = 0;
+            gameState.startTime = Date.now();
+            gameState.checkpointIndex = 1;
+            gameState.laps = 0;
+            
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('gameOver').style.display = 'none';
+            document.getElementById('ui').style.display = 'block';
+            
+            synth.playNote(440, 0.1);
+            synth.playNote(554, 0.1);
+            synth.playNote(659, 0.15);
+        }
+        
+        function endRace() {
+            gameState.isPlaying = false;
+            const time = gameState.time;
+            const trackName = tracks[gameState.currentTrack].name;
+            
+            // Save high score
+            if (!gameState.highScores[trackName] || time < gameState.highScores[trackName]) {
+                gameState.highScores[trackName] = time;
+                localStorage.setItem('ppHighScores', JSON.stringify(gameState.highScores));
+            }
+            
+            document.getElementById('finalTrack').textContent = trackName;
+            document.getElementById('finalTime').textContent = formatTime(time);
+            
+            const isNewRecord = gameState.highScores[trackName] === time;
+            document.getElementById('finalStatus').textContent = isNewRecord ? '*** NEW RECORD ***' : 'RACE COMPLETE';
+            
+            document.getElementById('gameOver').style.display = 'flex';
+            document.getElementById('ui').style.display = 'none';
+            
+            synth.playNote(1046, 0.3, 'sine');
+            synth.playNote(1318, 0.3, 'sine');
+        }
+        
+        function returnToMenu() {
+            document.getElementById('gameOver').style.display = 'none';
+            document.getElementById('menu').style.display = 'flex';
+            updateHighScoresDisplay();
+        }
+        
+        function updateHighScoresDisplay() {
+            const display = document.getElementById('highScoresDisplay');
+            let html = '<div style="margin-top: 20px;">HIGH SCORES</div>';
+            
+            tracks.forEach(track => {
+                const score = gameState.highScores[track.name];
+                if (score !== undefined) {
+                    html += `<div class="score-line">${track.name}: ${formatTime(score)}</div>`;
+                } else {
+                    html += `<div class="score-line">${track.name}: --:--</div>`;
+                }
+            });
+            
+            display.innerHTML = html;
+        }
+        
+        function gameLoop() {
+            // Update time and gamepad state
+            if (gameState.isPlaying) {
+                gameState.time = Date.now() - gameState.startTime;
+                updateGamepad();
+                handleInput();
+                updatePhysics();
+            }
+            
+            // Clear canvas
+            ctx.fillStyle = '#001100';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw grid background
+            ctx.strokeStyle = '#003300';
+            ctx.lineWidth = 0.5;
+            for (let x = 0; x < canvas.width; x += 50) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, canvas.height);
+                ctx.stroke();
+            }
+            for (let y = 0; y < canvas.height; y += 50) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(canvas.width, y);
+                ctx.stroke();
+            }
+            
+            // Draw game elements
+            if (gameState.isPlaying) {
+                drawTrack(tracks[gameState.currentTrack]);
+                drawPlayer();
+                updateUI();
+            }
+            
+            requestAnimationFrame(gameLoop);
+        }
+        
+        // Initialize
+        updateHighScoresDisplay();
+        gameLoop();
+    </script>
+</body>
+</html>
