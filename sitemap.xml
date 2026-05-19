@@ -6,10 +6,16 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://blog.fluidfortune.com/posts/i-tried-to-break-an-ai-it-didnt-break-thats-the-problem.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://blog.fluidfortune.com/posts/the-pole-position-fiasco-what-a-broken-arcade-game-taught-me-about-choosing-the-right-ai.html</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://blog.fluidfortune.com/posts/the-box-how-pisces-moon-os-got-started.html</loc>
