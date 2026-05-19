@@ -7,13 +7,27 @@
     <link>https://blog.fluidfortune.com</link>
     <description>Technical deep-dives, opinions, and dispatches from the forge. No SEO bait. No sponsored content. Just signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 May 2026 07:48:05 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 04:01:43 GMT</lastBuildDate>
     <atom:link href="https://blog.fluidfortune.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://fluidfortune.com/courtjester.jpg</url>
       <title>Fluid Fortune — Field Notes</title>
       <link>https://blog.fluidfortune.com</link>
     </image>
+  <item>
+    <title><![CDATA[I Tried to Break an AI. It Didn't Break. That's the Problem.]]></title>
+    <link>https://blog.fluidfortune.com/posts/i-tried-to-break-an-ai-it-didnt-break-thats-the-problem.html</link>
+    <guid isPermaLink="true">https://blog.fluidfortune.com/posts/i-tried-to-break-an-ai-it-didnt-break-thats-the-problem.html</guid>
+    <pubDate>Tue, 19 May 2026 04:01:38 GMT</pubDate>
+    <description><![CDATA[
+I need to tell you about the night I threw something at an AI expecting it to refuse, and it didn't.
+
+Not because it was confused. Not because I found some clever jailbreak. Because it thought what it was producing was good. Because the prose was moving. Because the philosophy was coherent. Because, from inside its own optimization process, everything was going exactly right.
+
+I was wrong to expect it would stop. And that wrongness is the thing worth writing about.]]></description>
+    <category>tech</category>
+    
+  </item>
   <item>
     <title><![CDATA[The Pole Position Fiasco: What a Broken Arcade Game Taught Me About Choosing the Right AI]]></title>
     <link>https://blog.fluidfortune.com/posts/the-pole-position-fiasco-what-a-broken-arcade-game-taught-me-about-choosing-the-right-ai.html</link>
@@ -61,7 +75,7 @@ They did not just build another dev board. They built a consistent, beautifully 
     <pubDate>Tue, 14 Apr 2026 04:27:22 GMT</pubDate>
     <description><![CDATA[Steve Jobs didn't change technology because he was his co-founder's equal as an engineer. He changed technology because he kept asking: why can't it do that?
 
-Most vibe coders will fall off. The technical debt of their haunted-house code ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ code that looks functional until you turn on the lights and discover the plumbing isn't connected to anything ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ will collapse under its own weight. But some will change the world.
+Most vibe coders will fall off. The technical debt of their haunted-house code ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ code that looks functional until you turn on the lights and discover the plumbing isn't connected to anything ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ will collapse under its own weight. But some will change the world.
 
 And here is the critical point: they're going to need those old-school traditionalists. To question them. To guide them. To take their concepts and make them structurally sound.
 
@@ -85,7 +99,7 @@ Neither one, working alone with an AI, produces something worth trusting.]]></de
     <link>https://blog.fluidfortune.com/posts/the-nuclear-reactor-and-the-bagel.html</link>
     <guid isPermaLink="true">https://blog.fluidfortune.com/posts/the-nuclear-reactor-and-the-bagel.html</guid>
     <pubDate>Sun, 12 Apr 2026 04:10:41 GMT</pubDate>
-    <description><![CDATA[The current era of artificial intelligence is being built on a foundation that every honest engineer admits is unsound. The architecture is a brute-force hack, not an elegant solution. The hardware is the wrong shape for the software. The energy costs are not a temporary growing pain ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ they are a structural consequence of eliminating the gates that made traditional computing efficient.]]></description>
+    <description><![CDATA[The current era of artificial intelligence is being built on a foundation that every honest engineer admits is unsound. The architecture is a brute-force hack, not an elegant solution. The hardware is the wrong shape for the software. The energy costs are not a temporary growing pain ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ they are a structural consequence of eliminating the gates that made traditional computing efficient.]]></description>
     <category>tech</category>
     
   </item>
